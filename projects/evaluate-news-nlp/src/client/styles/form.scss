@@ -1,0 +1,61 @@
+@import "base.scss";
+//
+.form-group{
+    margin-bottom: 25px;
+}
+.form-control {
+    border: 1px solid #D4D4D4;
+    color: #BEBEBE;
+    caret-color: $second-color;
+    position: relative;
+    text-align: start;
+    border-radius: $radius;
+    height: 42px;
+    padding-left: 12px;
+    font-size: 14px;
+    width: 100%;
+    &::placeholder {
+        color: #BEBEBE;
+    }
+    &:hover,
+    &:focus {
+        outline: unset;
+        box-shadow: unset;
+        border-color: $main-color;
+    }
+}
+
+.btn {
+    border-radius: $radius;
+    @extend %ease;
+    font-size: 15px;
+    height: 42px;
+    line-height: 38px;
+    width: 100%;
+    display: block;
+    cursor: pointer;
+    
+    &:hover {
+        border-radius: 40px;
+        overflow: hidden;
+    }
+}
+
+.btn-main {
+    background-color: $main-color;
+    color: $white-color;
+    text-transform: uppercase;
+    border: 1px solid $main-color;
+    @extend %ease;
+    &:hover,
+    &:focus {
+        opacity: 1;
+        color: $white-color;
+        outline: none;
+        @extend %shadow;
+    }
+}
+.g-form{
+    width: 600px;
+    margin: 0 auto;
+}

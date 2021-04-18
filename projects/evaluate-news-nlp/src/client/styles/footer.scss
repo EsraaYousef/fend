@@ -1,0 +1,9 @@
+@import "base.scss";
+footer{
+    padding: 20px;
+    width: 100%;
+    p{
+        color: $black-color;
+        font-weight: 600;
+    }
+}

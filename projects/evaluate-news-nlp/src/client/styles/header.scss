@@ -1,0 +1,19 @@
+@import "base.scss";
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 60px;
+    width: 100%;
+    .header-brand{
+        width: 60px;
+        
+        img{
+            max-width: 100%;
+        }
+    }
+    .more-links{
+        color: $white-color;;
+    }
+}

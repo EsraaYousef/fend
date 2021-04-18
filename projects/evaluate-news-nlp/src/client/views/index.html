@@ -1,43 +1,58 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-    <head>
-        <meta charset="utf-8">
-        <title>Test</title>
-        <link rel="stylesheet" href="/styles/resets.css">
-        <link rel="stylesheet" href="/styles/base.css">
-        <link rel="stylesheet" href="/styles/header.css">
-        <link rel="stylesheet" href="/styles/form.css">
-        <link rel="stylesheet" href="/styles/footer.css">
-    </head>
 
-    <body>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta name="image" content="../images/udacity.png" />
+  <title>Test</title>
+</head>
 
-        <header>
-            <div class="">
-                Logo
-            </div>
-            <div class="">
-                navigation
-            </div>
-        </header>
+<body>
+  <div class="blc-bg">
+    <header>
+      <div class="header-brand">
+        <img id="home" alt="udacity" />
+      </div>
+      <div class="more-links">project 1</div>
+    </header>
 
-        <main>
-            <section>
-                <form class="" onsubmit="return handleSubmit(event)">
-                    <input id="name" type="text" name="input" value="" onblur="onBlur()" placeholder="Name">
-                    <input type="submit" name="" value="submit" onclick="return handleSubmit(event)" onsubmit="return handleSubmit(event)">
-                </form>
-            </section>
+    <main>
+      <section>
+        <div class="container">
+          <div class="g-form bg-white w-radius w-shadow w-border p-20">
+            <form onsubmit="return handleSubmit(event)">
+              <div class="form-group">
+                <input class="form-control" id="name" type="text" name="input" value="" placeholder="Name" />
+              </div>
+              <button class="btn btn-main" type="submit" name="" value="submit"
+                onclick="return Client.handleSubmit(event)" onsubmit="return handleSubmit(event)">submit</button>
+            </form>
+          </div>
+        </div>
+      </section>
+      <!-- <section>
+          <strong>Form Results:</strong>
+          <div id="results"></div>
+        </section> -->
+    </main>
 
-            <section>
-                <strong>Form Results:</strong>
-                <div id="results"></div>
-            </section>
-        </main>
+    <footer>
+      <div class="container">
+        <p class="text-center">This is a footer</p>
+      </div>
+    </footer>
+  </div>
+  <script>
+    // Check that service workers are supported
+    if ("serviceWorker" in navigator) {
+      // Use the window load event to keep the page load performant
+      window.addEventListener("load", () => {
+        // navigator.serviceWorker.register("../dist/service-worker.js");
+        navigator.serviceWorker.register("../dist/service-worker.js");
+      });
+    }
+  </script>
+</body>
 
-        <footer>
-            <p>This is a footer</p>
-        </footer>
-
-    </body>
 </html>
